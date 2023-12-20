@@ -10,10 +10,24 @@ sumArray([0, 1, -3]); //  -2
 sumArray([1, 2, 3, 4, 5]); // 15
 ***********************************************************************/
 
-function sumArray(arr) {
-  // Your code here 
+function sumArray(arr, sum = 0) {
+
+debugger
+  if(arr.length === 0){ //basecase
+    return sum
+  }
+debugger
+  if(arr.length > 0){
+    sum += arr[arr.length -1]
+    arr.pop()
+    return sumArray(arr, sum)
+  }
 }
-  
+
+console.log(sumArray([1, 2, 3])); //  6
+console.log(sumArray([0, 1, -3])); //  -2
+console.log(sumArray([1, 2, 3, 4, 5])); // 15
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
   module.exports = sumArray;
