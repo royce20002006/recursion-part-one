@@ -12,13 +12,14 @@ sumArray([1, 2, 3, 4, 5]); // 15
 
 function sumArray(arr, sum = 0) {
 
-debugger
+
   if(arr.length === 0){ //basecase
     return sum
   }
-debugger
-  if(arr.length > 0){
 
+  if(arr.length > 0){
+    sum += arr[arr.length - 1];
+    arr.pop();
     return sumArray(arr, sum)
   }
 }
