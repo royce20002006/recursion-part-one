@@ -18,8 +18,7 @@ debugger
   }
 debugger
   if(arr.length > 0){
-    sum += arr[arr.length -1]
-    arr.pop()
+
     return sumArray(arr, sum)
   }
 }
